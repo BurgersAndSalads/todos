@@ -2,14 +2,18 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 
 require('dotenv').config();
 require('./config/database');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+app.use(bodyParser.json());
 
 // Configure both serve-favicon & static middlewares
 // to serve from the production 'build' folder

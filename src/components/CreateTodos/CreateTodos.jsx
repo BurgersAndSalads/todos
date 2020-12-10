@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateTodos extends Component {
     constructor(props) {
@@ -9,7 +10,6 @@ export default class CreateTodos extends Component {
             todoDetails: '',
             todoCheck: false,
         }
-
     }
 
     onChangeTodoName = (e) => {
@@ -26,6 +26,16 @@ export default class CreateTodos extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+
+        const newTodo = {
+            todoName: this.state.todoName,
+            todoDetails: this.state.todoDetails,
+            todoCheck: this.state.todoCheck,
+        }
+
+        axios.post('http://localhost:3001/todos/create', newTodo)
+            .then(res => console.log(res.data));
+
         this.setState({
             todoName: '',
             todoDetails: '',

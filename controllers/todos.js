@@ -1,4 +1,5 @@
 const Todo = require('../models/todo');
+const User = require('../models/user');
 
 module.exports = {
     getAll,
