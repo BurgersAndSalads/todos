@@ -1,8 +1,7 @@
 # Minimal Todo List
 
 ---
-
-[_Minimal Todo List on Heroku_](https://minimal-todos.herokuapp.com/)
+<a href="https://minimal-todos.herokuapp.com/"> Minimal Todo List on Heroku</a>
 
 ## Description
 
@@ -30,35 +29,45 @@ To provide insight of how the application was developed, the following sections 
 
 **_2. User stories_** <a name="stories"></a>
 
-![Trello](https://trello.com/b/56XpEI0k/todos)
+<a href="https://trello.com/b/56XpEI0k/todos"> Trello Board</a>
 
 **_3. Wireframes_** <a name="wireframes"></a>
 
-![homepage](https://imgur.com/a/9lhBnt2)
-![create todo page](https://imgur.com/a/hLp1ZDt)
-![edit a todo page](https://imgur.com/a/AvWYGLV)
+<h1>homepage</h1>
+<img src="./img/ViewTodos.png">
+
+<h1>create todo page</h1>
+<img src="./img/CreateTodos.png">
+
+<h1>edit a todo page</h1>
+<img src="./img/EditTodos.png">
 
 **_3. Entity Relationship Diagram (ERD)_** <a name="erd"></a>
 
-![Models](https://imgur.com/a/1VbWcpo)
+<h1>Models</h1>
+<img src="./img/TodosERD.png">
 
 ## Screen Shots
 
 > **_Landing Page_**
 
-![Landing Page](https://imgur.com/a/IQsLS2e)
+<h1>Landing Page</h1>
+<img src="./img/LandingPage.png">
 
 > **_Create a Todo_**
 
-![Create a Todo](https://imgur.com/a/q3yUarr)
+<h1>Create a Todo</h1>
+<img src="./img/CreateATodo.png">
 
 > **_Edit a Todo_**
 
-![Edit a Todo](https://imgur.com/a/D5Bz3zV)
+<h1>Edit a Todo</h1>
+<img src="./img/EditATodo.png">
 
 > **_Populatted List_**
 
-![Populated List](https://imgur.com/a/o7uv7at)
+<h1>Populated List</h1>
+<img src="./img/PopulatedList.png">
 
 ## Ice Box
 properly implement authentication
