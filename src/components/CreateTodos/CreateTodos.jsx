@@ -36,7 +36,7 @@ export default class CreateTodos extends Component {
             todoCheck: this.state.todoCheck,
         }
 
-        axios.post('http://localhost:3001/api/todos/create', newTodo)
+        axios.post('https://minimal-todos.herokuapp.com/api/todos/create', newTodo)
             .then(res => console.log(res.data));
 
         this.setState({

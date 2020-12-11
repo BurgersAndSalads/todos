@@ -17,7 +17,7 @@ export default class Todo extends Component {
     
 
     deleteTodo() {
-        axios.post('http://localhost:3001/api/todos/delete/' + this.props.todo._id)
+        axios.post('https://minimal-todos.herokuapp.com/api/todos/delete/' + this.props.todo._id)
             .then((res) => {
                 console.log('todo deleted')
             }).catch((error) => {
