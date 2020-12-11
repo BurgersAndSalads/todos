@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './EditTodos.css';
 
 export default class EditTodos extends Component {
     constructor(props) {
@@ -56,24 +59,31 @@ export default class EditTodos extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Edit Todo</h1>
                 <form onSubmit={this.onSubmit}>
-                    <div>
+                    <div className="input-group mb-3">
                         <label>Todo Name:</label>
-                        <input type="text" value={this.state.todoName} onChange={this.onChangeTodoName} />
+                        <input type="text" 
+                            className="form-control"
+                            value={this.state.todoName} 
+                            onChange={this.onChangeTodoName} />
                     </div>
-                    <div>
+                    <div className="input-group mb-3">
                         <label>Todo Details:</label>
-                        <input type="text" value={this.state.todoDetails} onChange={this.onChangeTodoDetails} />
+                        <input type="text" 
+                            className="form-control"
+                            value={this.state.todoDetails} 
+                            onChange={this.onChangeTodoDetails} />
                     </div>
-                    <div>
-                        <input type="checkbox" value={this.state.todoCheck} onChange={this.onChangeTodoChecked} checked={this.state.todoCheck}/>
-                        <label>Checked</label>
+                    <div className="form-check">
+                        <input type="checkbox" className="form-check-input" id="flexCheckDefault"
+                            value={this.state.todoCheck} 
+                            onChange={this.onChangeTodoChecked} 
+                            checked={this.state.todoCheck}/>
+                        <label>Checked for Completion</label>
                     </div>
-                    <div>
-                        <input type="submit" value="Commit" />
-                    </div>
+                    <Button variant="primary" type="submit">Change</Button>
                 </form>
             </div>
         );

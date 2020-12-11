@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './DeleteTodos.css'
 
 export default class Todo extends Component {
 
@@ -30,8 +32,10 @@ export default class Todo extends Component {
                 <td className={this.props.todo.todoCheck ? 'checked' : ''}>{this.props.todo.todoName}</td>
                 <td className={this.props.todo.todoCheck ? 'checked' : ''}>{this.props.todo.todoDetails}</td>
                 <td>
-                    <Link to={'/edit/'+this.props.todo._id}>Edit</Link>
-                    <button onClick={this.deleteTodo}>Delete</button>
+                    <Button variant="info" id="edit-btn">
+                        <Link to={'/edit/'+this.props.todo._id} id="edit-link">Edit</Link>
+                    </Button>
+                    <Button variant="secondary" id="delete-btn" onClick={this.deleteTodo}>Delete</Button>
                 </td>
             </tr>
     

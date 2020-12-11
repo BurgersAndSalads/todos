@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import todoService from '../../utils/todoService';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './CreateTodos.css';
 
 export default class CreateTodos extends Component {
     constructor(props) {
@@ -46,26 +48,26 @@ export default class CreateTodos extends Component {
 
     render() {
         return(
-            <div>
+            <div className="container">
                 <h1>New Todo</h1>
                 <form onSubmit={this.onSubmit} >
-                    <div>
-                        <label>Todo Name</label>
+                    <div className="input-group mb-3">
+                        <label>Todo Name:</label>
                         <input  type="text"
+                                className="form-control"
                                 value={this.state.todoName}
                                 onChange={this.onChangeTodoName}
                         />
                     </div>
-                    <div>
-                        <label>Todo Details</label>
+                    <div className="input-group mb-3">
+                        <label>Todo Details: </label>
                         <input  type="text"
+                                className="form-control"
                                 value={this.state.todoDetails}
                                 onChange={this.onChangeTodoDetails}
                         />
                     </div>
-                    <div>
-                        <input type="submit" value="Add Todo"/>
-                    </div>
+                    <Button variant="primary" type="submit">Add Todo</Button>
                 </form>
 
             </div>

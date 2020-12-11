@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DeleteTodos from '../DeleteTodos/DeleteTodos';
+import Table from 'react-bootstrap/Table';
+import './ViewTodos.css'
 
 export default class ViewTodos extends Component {
     constructor(props) {
@@ -38,9 +40,9 @@ export default class ViewTodos extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Todo List</h1>
-                <table>
+                <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -51,7 +53,7 @@ export default class ViewTodos extends Component {
                     <tbody>
                         { this.all() }
                     </tbody>
-                </table>
+                </Table>
             </div>
         );
     }

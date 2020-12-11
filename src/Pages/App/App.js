@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Redirect, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBarComponent from '../../components/NavBar/NavBar';
 
 import ViewTodos from '../../components/ViewTodos/ViewTodos';
 import EditTodos from '../../components/EditTodos/EditTodos';
@@ -35,7 +35,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <NavBar
+        <NavBarComponent
           user={this.state.user}
           handleLogout={this.handleLogout}
         />
