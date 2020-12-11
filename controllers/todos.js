@@ -1,17 +1,20 @@
+const { NavbarText } = require('bootstrap-react');
 const Todo = require('../models/todo');
-const User = require('../models/user');
 
 module.exports = {
     getAll,
     create,
     edit,
     delete: deleteTodo,
-    getOne,
 }
 
 async function getAll(req, res) {
-    Todo.find({}, function(err, todo) {
-        res.json(todo);
+    Todo.find((err, todo) => {
+        if (err) {
+            return next(error);
+        } else {
+            res.json(todo);
+        }
     });
 }
 
@@ -44,13 +47,13 @@ async function edit(req, res) {
 }
 
 async function deleteTodo(req, res) {
-    Todo.findById(req.params.id, function(err, todo) {
-        todo.remove();
-    });
-}
-
-async function getOne(req, res) {
-    Todo.findById(req.params.id, function(err, todo) {
-        res.json(todo);
+    Todo.findByIdAndRemove(req.params.id, function(err, todo) {
+        if (err) {
+            return next(todo);
+        } else {
+            res.status(200).json({
+                msg: todo
+            });
+        }
     });
 }
