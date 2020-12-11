@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Minimal Todo List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+[_Minimal Todo List on Heroku_](https://minimal-todos.herokuapp.com/)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+A todo list app using MERN stack to perform CRUD functions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- MERN stack
 
-### `npm test`
+## Project Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To provide insight of how the application was developed, the following sections are covered:
 
-### `npm run build`
+1. [Project Requirements](#requirements)
+2. [User stories](#stories)
+3. [Wireframes](#wireframes)
+4. [Entity Relationship Diagram](#erd)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**_1. Project Requirements_** <a name="requirements"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- MERN stack
+- 2 Data models
+- CRUD functionalities
+- Deployed on Heroku
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**_2. User stories_** <a name="stories"></a>
 
-### `npm run eject`
+![Trello](https://trello.com/b/56XpEI0k/todos)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**_3. Wireframes_** <a name="wireframes"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![homepage](https://imgur.com/a/9lhBnt2)
+![create todo page](https://imgur.com/a/hLp1ZDt)
+![edit a todo page](https://imgur.com/a/AvWYGLV)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**_3. Entity Relationship Diagram (ERD)_** <a name="erd"></a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Models](https://imgur.com/a/1VbWcpo)
 
-## Learn More
+## Screen Shots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> **_Landing Page_**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Landing Page](https://imgur.com/a/IQsLS2e)
 
-### Code Splitting
+> **_Create a Todo_**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Create a Todo](https://imgur.com/a/q3yUarr)
 
-### Analyzing the Bundle Size
+> **_Edit a Todo_**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Edit a Todo](https://imgur.com/a/D5Bz3zV)
 
-### Making a Progressive Web App
+> **_Populatted List_**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Populated List](https://imgur.com/a/o7uv7at)
 
-### Advanced Configuration
+## Ice Box
+properly implement authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+each user who logs in will only see a todo list associated with their account.
 
-### Deployment
+add some pezaz
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
