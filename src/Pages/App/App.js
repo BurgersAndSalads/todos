@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Redirect, Route } from 'react-router-dom';
 
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -53,11 +53,9 @@ export default class App extends Component {
             />
           }/>
         </Switch>
-        <Switch>
-          <Route path="/" exact component={ViewTodos} />
-          <Route path="/edit/:id" component={EditTodos} />
-          <Route path="/create" component={CreateTodos} />
-        </Switch>
+        <Route path="/" exact component={ViewTodos} />
+        <Route path="/edit/:id" component={EditTodos} />
+        <Route path="/create" component={CreateTodos} />
       </div>
     );
   } 

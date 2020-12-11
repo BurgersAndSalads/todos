@@ -7,14 +7,17 @@ export default class Todo extends Component {
 
     constructor(props) {
         super(props);
+        this.state = ({
+            user: this.props.user,
+        })
         this.deleteTodo = this.deleteTodo.bind(this);
     }
     
 
     deleteTodo() {
-        axios.post('http://localhost:3001/todos/delete/' + this.props.todo._id)
+        axios.post('http://localhost:3001/api/todos/delete/' + this.props.todo._id)
             .then((res) => {
-                console.log('Student successfully deleted!')
+                console.log('todo deleted')
             }).catch((error) => {
                 console.log(error)
             })

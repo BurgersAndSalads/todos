@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import todoService from '../../utils/todoService';
 
 export default class CreateTodos extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ export default class CreateTodos extends Component {
             todoCheck: this.state.todoCheck,
         }
 
-        axios.post('http://localhost:3001/todos/create', newTodo)
+        axios.post('http://localhost:3001/api/todos/create', newTodo)
             .then(res => console.log(res.data));
 
         this.setState({
