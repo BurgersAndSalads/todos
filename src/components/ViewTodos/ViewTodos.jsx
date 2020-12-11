@@ -13,7 +13,7 @@ export default class ViewTodos extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/api/todos/')
+        axios.get('https://minimal-todos.herokuapp.com/api/todos/')
             .then(res => {
                 this.setState({todos: res.data});
             })
@@ -23,7 +23,7 @@ export default class ViewTodos extends Component {
     }
 
     componentDidUpdate() {
-        axios.get('http://localhost:3001/api/todos')
+        axios.get('https://minimal-todos.herokuapp.com/api/todos')
             .then(res => {
                 this.setState({todos: res.data});
             })
