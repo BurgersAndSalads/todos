@@ -16,7 +16,7 @@ export default class EditTodos extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/todos/'+this.props.match.params.id)
+        axios.get('https://minimal-todos.herokuapp.com/todos/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
                     todoName: res.data.todoName,
@@ -52,7 +52,7 @@ export default class EditTodos extends Component {
             todoDetails: this.state.todoDetails,
             todoCheck: this.state.todoCheck,
         }
-        axios.post('http://localhost:3001/api/todos/edit/'+this.props.match.params.id, todoObj)
+        axios.post('https://minimal-todos.herokuapp.com/api/todos/edit/'+this.props.match.params.id, todoObj)
             .then(res => console.log(res.data));
         this.props.history.push('/');
     }
